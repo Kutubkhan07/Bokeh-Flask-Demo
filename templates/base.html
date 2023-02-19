@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>  Time series Data Analyser</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+</head>
+
+<body>
+	<header>
+		<div clas= "main">
+			<ul>
+				<li> <a href="{{ url_for('auth.login') }}">Login </a> </li>
+				<li> <a href="{{ url_for('auth.signup') }}">Sign Up</a> </li>
+				<li> <a href="{{ url_for('auth.logout') }}">Log Out</a> </li>
+				<li> <a href="#">Help and Instructions </a> </li>
+			</ul>
+
+
+		</div>
+		<div class="title">
+			<h1> DATA ANALYSER</h1>
+		</div>
+
+  {% block content %}
+               {% endblock %}
+
+		</div>
+
+	</header>
+
+</body>
+
+</html>

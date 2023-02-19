@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Plot</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/analyser.css">
+  </head>
+  <body>
+
+    <table>
+      {% for table in tables %}
+                  {{ table|safe }}
+      {% endfor %}
+      </table>
+      
+      
+      <hr>
+      {% for table in tables1 %}
+                  {{ table|safe }}
+      {% endfor %}
+      <hr>
+
+    <form method="POST" action="" enctype="multipart/form-data">
+      <div class= "button">
+        <a><input class ="btn" type="file" name="file"></a><br></div>
+        <div class="button_url">
+        <a><input class="url-upload" type="url" name="url_text" placeholder="Please Enter the URL Here" size="40"></a></div>
+        <span class="error" name='no_file_error' style="color:red">{{no_file_error}}</span>
+        <br><br><br>
+
+    <label for='x_axis'>Choose X Axis:</label>
+    <select name='x_axis' id='x_axis'>
+    {% for column in columns %}
+        <option value="{{ column }}">{{column}}</option>
+    {% endfor %}
+    </select>
+    <span class="error" name='x_axis_error' style="color:red">{{x_error}}</span>
+    
+    <label for='x_axis_datatype'>Choose Time Data type:</label>
+    <select name='x_axis_datatype' id='x_axis_datatype'>
+    {% for dt in datatype_list %}
+        <option value="{{ dt }}">{{dt}}</option>
+    {% endfor %}
+    </select>
+    <span class="error" name='x_axis_datatype_error' style="color:red">{{x_axis_datatype_error}}</span>
+<br>
+<br>
+
+
+
+
+
+
+<div class="customer_records">
+
+
+    <label for='y_axis'>Choose Y Axis:</label>
+
+<select multiple name='y_axis' id='y_axis' multiple class="chosen-select">
+    
+    {% for column in columns %}
+        <option value="{{ column }}">{{column}}</option>
+    {% endfor %}
+    </select>
+    <span class="error" name='y_axis_error' style="color:red">{{y_error}}</span>
+
+    <label for='y_axis_filter'>Filter By:</label>
+    <select name='y_axis_filter' id='y_axis_filter'>
+    {% for column in ['None']+columns %}
+        <option value="{{ column }}">{{column}}</option>
+    {% endfor %}
+    </select>
+    <span class="error" name='filter_error' style="color:red">{{filter_error}}</span>
+<br>
+<br>
+
+    {% if many_to_one == 1 %}
+    <label for='data_filter'>Choose Filtered Data column:</label>
+    <select multiple name='data_filter' id='data_filter' multiple class="chosen-select">
+    {% for dt in data_filter %}
+        <option value="{{ dt }}">{{dt}}</option>
+    {% endfor %}
+    </select>
+        <span class="error" name='filter_option_error' style="color:red">{{filter_option_error}}</span>
+    {% endif %}
+<a class="extra-fields-customer" href="#" >Add More axes</a>
+
+
+
+</div>
+        <div class="customer_records_dynamic"></div>
+        <div class="button_submit">
+        <a><input class="submit" type="submit" value="Submit"></a>
+
+<br><br>
+
+    {{ script|safe }}
+  </body>
+</html>

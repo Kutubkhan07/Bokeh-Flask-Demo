@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Data</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/analyser.css">
+
+
+</head>
+<body>
+
+		<div class= "text">
+			<h5> In order to visualise your data, upload the file in .csv or .xlxs format or provide the link to the source below</h5>
+		</div>
+
+	
+	<form method="POST" action="" enctype="multipart/form-data">
+		<div class= "button">
+      <a><input class ="btn" type="file" name="file"></a><br></div>
+      <div class="button_url">
+      <a><input class="url-upload" type="url" name="url_text" placeholder="Please Enter the URL Here" size="40"></a></div>
+      <div class="button_submit">
+      <a><input class="submit" type="submit" value="Submit"></a>
+      <span class="error" name='no_file_error' style="color:red">{{no_file_error}}</span>
+    
+
+		
+			</form>

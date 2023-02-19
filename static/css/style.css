@@ -1,0 +1,170 @@
+*{
+	margin: 0;
+	padding : 0;
+	font-family: Century Gothic;
+}
+
+header{
+	background-image : url(../img/image.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: centre;
+}
+
+ul{
+	float:right;
+	list-style-type: none;
+	margin-top: 40px;
+	margin-right: 50px;
+
+}
+ul li{
+	display : inline-block;
+}
+
+ul li a{
+	text-decoration: none;
+	border-radius: 12px;
+	color: #000;
+	padding: 5px 20px;
+	border: 1px solid #fff;
+	transition: 0.6s ease;
+	background-color: #fff
+}
+
+ul li a:hover{
+	background-color: #add8e6;
+	color : #000;
+}
+
+/*.main{
+	max-width : 1200 px;
+	margin: auto;
+}*/
+
+.title{
+	/*float : right;*/
+	position: absolute;
+	top: 6%;
+	left : 10%;
+	/*right:  0%;*/
+	transform: translate(-50%, -50%);
+}
+.title h1{
+	color : #fff;
+	font-size : 25px;
+}
+
+.button{
+	position: absolute;
+	top: 78%;
+	left : 55%;
+	/*right:  0%;*/
+	transform: translate(-50%, -50%);
+
+	
+	text-align: center;
+	
+
+}
+
+
+
+.btn{
+	background-color: #fff;
+	border: 1px solid white;
+	padding : 5px 5px;
+	color: 	#708090;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: 0.6s ease;
+	margin-right:23px;
+
+	
+}
+
+.btn:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.text{
+	position: absolute;
+	top: 70%;
+	left : 72%;
+	color: 	#fff;
+	/*right:  0%;*/
+	transform: translate(-50%, -50%);
+
+	
+	text-align: center;
+
+}
+
+
+
+.button_url{
+	position: absolute;
+	top: 80%;
+	left : 78%;
+	/*right:  0%;*/
+	transform: translate(-50%, -50%);
+
+	
+	text-align: center;
+	
+
+}
+
+.url-upload{
+	background-color: none;
+	border: 3px solid white;
+	padding : 5px 25px;
+	color: 	#708090;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: 0.6s ease;
+	margin-right:100px;
+
+	
+
+}
+
+.url-upload:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.button_submit{
+	position: absolute;
+	top: 80%;
+	left : 94%;
+	/*right:  0%;*/
+	transform: translate(-50%, -50%);
+
+	
+	text-align: center;
+	
+
+}
+
+.submit{
+	background-color: none;
+	border: 3px solid white;
+	padding : 4px 26.5px;
+	color: 	#006400;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: 0.6s ease;
+	margin-right:100px;
+
+	
+
+
+}
+
+.submit:hover{
+	background-color: #fff;
+	color: #000;
+}
+	
